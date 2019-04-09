@@ -2,4 +2,4 @@
 ＃如果您更改站点的自定义域或HTTPS设置，这些规则将会更改
 
 ＃将默认Netlify子域重定向到主域
-http://chenqi.netlify.com/* http://chenqi.site/:splat 301！
+http://qi.netlify.com/* http://www.chenqi.site/:splat 301！
