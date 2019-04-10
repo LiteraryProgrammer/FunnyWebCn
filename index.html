@@ -97,7 +97,10 @@
             <div class="containers">
                 <div class="row">
                     <div class="col-lg-12">
-
+						<audio controls="controls"  id="audio"  autoplay="autoplay" >
+						<source src="img/IfIwereaBird.mp3" type="audio/mpeg" />
+						您的浏览器不支持背景音乐！
+						</audio>
                         <!-- Title -->
                         <div class="title">
                             <h1>Ki Chan</h1>
@@ -707,7 +710,27 @@
     <!-- fullscreen -->
 
     <!--Script -->
-
+	<script type="text/javascript">
+	//--创建页面监听，等待微信端页面加载完毕 触发音频播放
+	document.addEventListener('DOMContentLoaded', function () {
+		function audioAutoPlay() {
+			var audio = document.getElementById('audio');
+				audio.play();
+			document.addEventListener("WeixinJSBridgeReady", function () {
+				audio.play();
+			}, false);
+		}
+		audioAutoPlay();
+	});
+	//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+	document.addEventListener('touchstart', function () {
+		function audioAutoPlay() {
+			var audio = document.getElementById('audio');
+				audio.play();
+		}
+		audioAutoPlay();
+	});
+	</script>
     <!-- Jquery v1.12.0 -->
     <script src="js/jquery.min.js"></script>
     <!--Bootstrap Js-->
