@@ -30,6 +30,9 @@
 		s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
+	
+	<script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -719,6 +722,12 @@
     <!-- fullscreen -->
 
     <!--Script -->
+	<script>
+		L.mapbox.accessToken = 'pk.eyJ1Ijoicm92aW5na2l0ZSIsImEiOiJjanVhc3B3dTgwNW9sNDRwZDJvaTZzdXo4In0.Z9h5QU30LahYOp5axnsIyA';
+		var map = L.mapbox.map('map')
+		.setView([113.55, 22.26], 9)
+		.addLayer(L.mapbox.styleLayer('mapbox://styles/rovingkite/cjuathjhn14mi1fmtco2axfoc'));
+	</script>
     <!-- Jquery v1.12.0 -->
     <script src="js/jquery.min.js"></script>
     <!--Bootstrap Js-->
@@ -743,6 +752,6 @@
 
     <!-- end script -->
 </body>
-<iframe src="img/IfIwereaBird.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+<iframe src="img/IfIwereaBird.mp3" allow="autoplay" style="display:none"  loop ="loop" id="iframeAudio"></iframe>
 
 </html>
