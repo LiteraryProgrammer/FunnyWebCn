@@ -31,8 +31,8 @@
 	})();
 	</script>
 	
-	<script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -577,10 +577,10 @@
 
                     <!-- title -->
                     <div class="col-md-12 headline">
-                        <h2>快拉我过去一起奋斗吧!</h2>
+                        <h2>一起奋斗吧!</h2>
                         <hr>
                         <!-- <p>I'm available for freelance opportunities.</p> -->
-						<P>目前我还在工作岗位搬砖</P>
+						<P>目前我还在工作岗位  搬砖</P>
                     </div>
                     <!-- End title -->
 
@@ -599,7 +599,7 @@
                 <!-- Email me button -->
                 <div class="row">
                     <div class="col-md-12 animated text-center">
-                        <a href="mailto:rovingkite@foxmail.com" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i> 暂时联系不到我哦</a>
+                        <a href="mailto:rovingkite@foxmail.com" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i> 联系我把</a>
                     </div>
                 </div>
                 <!-- row -->
@@ -723,10 +723,21 @@
 
     <!--Script -->
 	<script>
-		L.mapbox.accessToken = 'pk.eyJ1Ijoicm92aW5na2l0ZSIsImEiOiJjanVhc3B3dTgwNW9sNDRwZDJvaTZzdXo4In0.Z9h5QU30LahYOp5axnsIyA';
-		var map = L.mapbox.map('map')
-		.setView([113.55, 22.26], 9)
-		.addLayer(L.mapbox.styleLayer('mapbox://styles/rovingkite/cjuathjhn14mi1fmtco2axfoc'));
+	mapboxgl.accessToken = 'pk.eyJ1Ijoicm92aW5na2l0ZSIsImEiOiJjanVhc3B3dTgwNW9sNDRwZDJvaTZzdXo4In0.Z9h5QU30LahYOp5axnsIyA';
+	var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/rovingkite/cjuathjhn14mi1fmtco2axfoc',
+	center: [113.533877, 22.268744],
+    zoom: 13
+	});
+	
+	var marker = new mapboxgl.Marker();
+	var radius = 20;
+	marker.setLngLat([
+	113.533877, 22.268744
+	]);
+ 
+	marker.addTo(map);
 	</script>
     <!-- Jquery v1.12.0 -->
     <script src="js/jquery.min.js"></script>
