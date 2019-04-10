@@ -21,6 +21,15 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Addon Style -->
     <link rel="stylesheet" href="css/style.css" media="screen" />
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?515fb197ae9184e6421b2d2a14b3da02";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
 </head>
 
 <body>
@@ -710,26 +719,29 @@
     <!-- fullscreen -->
 
     <!--Script -->
+
 	<script type="text/javascript">
-	//--创建页面监听，等待微信端页面加载完毕 触发音频播放
-	document.addEventListener('DOMContentLoaded', function () {
-		function audioAutoPlay() {
-			var audio = document.getElementById('iframeAudio');
-				audio.play();
-			document.addEventListener("WeixinJSBridgeReady", function () {
-				audio.play();
-			}, false);
-		}
-		audioAutoPlay();
-	});
-	//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-	document.addEventListener('touchstart', function () {
-		function audioAutoPlay() {
-			var audio = document.getElementById('audio');
-				audio.play();
-		}
-		audioAutoPlay();
-	});
+
+
+	<!-- //--创建页面监听，等待微信端页面加载完毕 触发音频播放 -->
+	<!-- document.addEventListener('DOMContentLoaded', function () { -->
+		<!-- function audioAutoPlay() { -->
+			<!-- var audio = document.getElementById('iframeAudio'); -->
+				<!-- audio.play(); -->
+			<!-- document.addEventListener("WeixinJSBridgeReady", function () { -->
+				<!-- audio.play(); -->
+			<!-- }, false); -->
+		<!-- } -->
+		
+	<!-- }); -->
+	<!-- //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放 -->
+	<!-- document.addEventListener('touchstart', function () { -->
+		<!-- function audioAutoPlay() { -->
+			<!-- var audio = document.getElementById('audio'); -->
+				<!-- audio.play(); -->
+		<!-- } -->
+		<!-- audioAutoPlay(); -->
+	<!-- }); -->
 	</script>
     <!-- Jquery v1.12.0 -->
     <script src="js/jquery.min.js"></script>
