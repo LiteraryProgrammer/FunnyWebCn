@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Addon Style -->
     <link rel="stylesheet" href="css/style.css" media="screen" />
+
 	<script>
 	var _hmt = _hmt || [];
 	(function() {
@@ -30,13 +31,12 @@
 		s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
-	
-	<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+	<script src='js/mapboxgl.js'></script>
+    <link href='css/mapboxgl.css' rel='stylesheet' />
 </head>
 
 <body>
-
     <!-- Preloader -->
     <div id="preloader">
         <div id="loader">
@@ -587,7 +587,7 @@
                     <!-- Start google maps / change your address in data-center-->
                     <div class="col-md-12 animated">
                         <div class="gmap" id="map" data-center="121 S Pinckney St" data-zoom="15">
-                            <address>
+                            <address style="position:fixed; margin-top:0; width:100%; z-index:9999; ">
                             中国 ● 珠海
                             </address>
                         </div>
